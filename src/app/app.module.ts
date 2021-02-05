@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { DailyUtf8Service } from 'src/services/daily-utf8.service';
+import { DailyJsonService } from 'src/services/daily-json.service';
+// import { DailyUtf8Service } from './daily';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    DailyUtf8Service,
+    DailyJsonService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
