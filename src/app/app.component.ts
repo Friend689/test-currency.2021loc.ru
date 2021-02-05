@@ -9,17 +9,6 @@ import { DailyUtf8Service } from '../services/daily-utf8.service';
 })
 export class AppComponent {
   title = 'app';
-  public arrSources = [
-    {
-      url: 'https://www.cbr-xml-daily.ru/daily_utf8.xml',
-      respType: "text",
-    },
-    {
-      url: 'https://www.cbr-xml-daily.ru/daily_json.js',
-      respType: 'json',
-    },];
-  public curSource = 0;
-  public arrCurrency = [];
   public curCurrency = '';
 
   constructor(
