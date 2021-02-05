@@ -35,17 +35,18 @@ export class AppComponent {
     }, 300);
     let count = 0;
     setInterval(() => {
-      let temp: any = '';
+      let temp: any = 0;
       if (count <= 5) {
         this.dailyUtf8.getHttpValute();
       } else if (count >= 5 && count <= 10) {
         this.dailyJson.getHttpValute();
+        temp = 1;
         if (count === 10) { count = 0;}
       }
       if (this.curCurrency === undefined) {
         count++;
       } else {
-        this.curCurrency = this.dailyJson.charValue;
+        this.curCurrency = temp === 0 ? this.dailyJson.charValue : this.dailyJson.charValue;
       }
   }, 5000);
   }
