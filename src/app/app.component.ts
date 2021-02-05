@@ -35,7 +35,7 @@ export class AppComponent {
       if (this.curCurrency === undefined) {
         count++;
       } else {
-        this.curCurrency = temp === 0 ? this.dailyJson.charValue : this.dailyJson.charValue;
+        this.curCurrency = temp === 0 ? this.dailyUtf8.charValue : this.dailyJson.charValue;
       }
   }, 5000);
   }
